@@ -16,7 +16,6 @@ struct ContentView: View {
     
     @State private var showingAddScreen = false
     @State private var showingSearchScreen = false
-
     
     var body: some View {
         NavigationView {
@@ -44,12 +43,12 @@ struct ContentView: View {
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
-                            showingAddScreen.toggle()
+                            self.showingAddScreen.toggle()
                         } label: {
                             Label("Add Recipe", systemImage: "plus")
                         }
                         Button {
-                            showingSearchScreen.toggle()
+                            self.showingSearchScreen.toggle()
                         } label: {
                             Label("Search", systemImage: "magnifyingglass")
                         }
