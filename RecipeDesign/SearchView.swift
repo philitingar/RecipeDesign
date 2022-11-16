@@ -20,8 +20,9 @@ struct SearchView: View {
         NavigationView {
             List {
                 ForEach(recipes, id: \.self) { recipe in
-                    NavigationLink(destination: Text(recipe.title!)) {
+                    NavigationLink(destination: DetailView(recipe: recipe)) {
                         Text(recipe.title!)
+
                     }
                 }
             }
